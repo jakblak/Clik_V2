@@ -14,8 +14,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 7. App features
 
 ## Development server
+Run `npm start` for an angular server on port 4200 and node server on port 3000.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Packages
+
+**Node:** express cors sequelize pg morgan cookie-parser dotenv passport nodemon concurrently
+
+**Angular**
 
 ## Code scaffolding
 
