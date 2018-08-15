@@ -15,12 +15,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 Run `npm start` for an angular server on port 4200 and node server on port 3000.
+Or `ng s -o`
 
 ## Packages
 
 **Node:** express cors sequelize pg morgan cookie-parser dotenv passport nodemon concurrently bcrypt-nodejs
 
-**Angular** material flex
+**Angular:** material flex
 
 ## Code scaffolding
 
