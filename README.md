@@ -20,7 +20,7 @@ Run `npm start` for an angular server on port 4200 and node server on port 3000.
 
 **Node:** express cors sequelize pg morgan cookie-parser dotenv passport nodemon concurrently bcrypt-nodejs
 
-**Angular**
+**Angular** material flex
 
 ## Code scaffolding
 
