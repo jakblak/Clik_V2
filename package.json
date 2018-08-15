@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently --kill-others \"ng s -o\" \"nodemon server.js\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,6 +26,7 @@
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "logger": "^0.0.1",
+    "nodemon": "^1.18.3",
     "passport": "^0.4.0",
     "pg": "^7.4.3",
     "rxjs": "^6.0.0",
