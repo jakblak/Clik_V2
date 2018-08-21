@@ -16,6 +16,14 @@ module.exports = (sequelize, DataTypes) => {
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    salt: {
+      type: Sequelize.STRING
+    },
+    role: {
+      type: DataTypes.ENUM,
+      values: ['user', 'admin', 'disabled']
+
     }
   });
 
@@ -29,6 +37,11 @@ module.exports = (sequelize, DataTypes) => {
   User.hook("beforeCreate", (user) => {
     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
   });
+
+  User.associate = function(models) {
+    models.User.belongsToMany(models.Poll, { as: 'Voter', through: 'VotingList'});
+    models.User.belongsToMany(models.Group, { as: 'Member', through: 'GroupList'});
+  };
 
   return User;
 };

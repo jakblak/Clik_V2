@@ -11,7 +11,9 @@ require('./server/middleware/middleware')(app);
 require('./server/api')(app);
 
 // sync database and start server
-db.sequelize.sync().then(() => {
+db.sequelize.sync({
+  force: true 
+}).then(() => {
   app.listen(port, () => {
       console.log('running server on port ' + port);
   })
